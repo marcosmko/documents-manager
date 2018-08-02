@@ -12,7 +12,7 @@ import Persistence
 
 public class UserServices {
 
-    public func login(username: String, password: String, _ completion: ((_ user: User?, _ error: Error?) -> Void)?)  {
+    public static func login(username: String, password: String, _ completion: ((_ user: User?, _ error: Error?) -> Void)?)  {
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             var userToBeReturned: User?
             var raisedError: Error? = nil
@@ -34,7 +34,7 @@ public class UserServices {
         QueueManager.sharedInstance.executeBlock(blockForExecutionInBackground, queueType: QueueManager.QueueType.serial)
     }
     
-    public func fetch(_ completion: ((_ user: User?, _ error: Error?) -> Void)?)  {
+    public static func fetch(_ completion: ((_ user: User?, _ error: Error?) -> Void)?)  {
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             var userToBeReturned: User?
             var raisedError: Error? = nil

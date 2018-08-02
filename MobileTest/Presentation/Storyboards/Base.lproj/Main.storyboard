@@ -171,6 +171,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="vn7-ok-NmR" id="kbp-q4-6ru"/>
                         <outlet property="emailLabel" destination="FcQ-9Z-c5H" id="spe-Hr-Vy2"/>
+                        <outlet property="nameLabel" destination="7gV-X9-RqF" id="bDA-P7-Tjp"/>
                         <outlet property="phoneLabel" destination="KA1-oR-vOA" id="RJ3-oy-eDH"/>
                         <outlet property="pictureImageView" destination="vG2-ee-HVC" id="8xS-PY-uu6"/>
                     </connections>

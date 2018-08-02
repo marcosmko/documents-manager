@@ -11,4 +11,6 @@ import CoreData
 public final class User: NSManagedObject {
     public var name: String?
     public var email: String?
+    public var address: String?
+    public var phone: String?
 }
