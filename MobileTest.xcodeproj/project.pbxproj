@@ -44,6 +44,8 @@
 		F71A24AA21129C28001FA5EB /* MTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24A921129C28001FA5EB /* MTError.swift */; };
 		F71A24AC21129E05001FA5EB /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24AB21129E05001FA5EB /* PersistenceError.swift */; };
 		F71A24AF2112A175001FA5EB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24AE2112A175001FA5EB /* UserManager.swift */; };
+		F71A24B12112A417001FA5EB /* UserMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F71A24B02112A417001FA5EB /* UserMock.json */; };
+		F71A24B32112A4E4001FA5EB /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24B22112A4E4001FA5EB /* ServerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +222,8 @@
 		F71A24A921129C28001FA5EB /* MTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTError.swift; sourceTree = "<group>"; };
 		F71A24AB21129E05001FA5EB /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
 		F71A24AE2112A175001FA5EB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		F71A24B02112A417001FA5EB /* UserMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserMock.json; sourceTree = "<group>"; };
+		F71A24B22112A4E4001FA5EB /* ServerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +397,7 @@
 			children = (
 				F71A243A21127A01001FA5EB /* PersistenceTests.swift */,
 				F71A243C21127A01001FA5EB /* Info.plist */,
+				F71A24B02112A417001FA5EB /* UserMock.json */,
 			);
 			path = PersistenceTests;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				F71A249B2112911E001FA5EB /* Server.swift */,
+				F71A24B22112A4E4001FA5EB /* ServerMock.swift */,
 				F71A24A021129576001FA5EB /* Server+User.swift */,
 			);
 			path = Mechanism;
@@ -914,6 +920,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71A24B12112A417001FA5EB /* UserMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1003,7 @@
 				F71A24A721129BC5001FA5EB /* UserDAO.swift in Sources */,
 				F71A24A421129672001FA5EB /* UserExtension.swift in Sources */,
 				F71A249C2112911E001FA5EB /* Server.swift in Sources */,
+				F71A24B32112A4E4001FA5EB /* ServerMock.swift in Sources */,
 				F71A24A121129576001FA5EB /* Server+User.swift in Sources */,
 				F71A247F21127D82001FA5EB /* MobileTest.xcdatamodeld in Sources */,
 			);

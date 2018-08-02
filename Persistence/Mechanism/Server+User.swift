@@ -14,7 +14,7 @@ public extension Server {
     public struct Authentication {
 
         public static func login(username: String, password: String) throws -> User {
-            return try Server.request(endpoint: "")
+            return try Server.request(method: .get, endpoint: "")
         }
 
     }

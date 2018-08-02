@@ -16,12 +16,14 @@ public enum ServerError: Error {
 public class Server {
 
     private init() { }
+    static var current: Server.Type = ServerMock.self
     
-    internal enum Method: String {
+    
+    public enum Method: String {
         case get, post, put, delete
     }
     
-    static func createURLRequest(method: Method, endpoint: String, parameters: [String: Any]? = nil, payload: [String: Any]? = nil) throws -> URLRequest {
+    class func createURLRequest(method: Method, endpoint: String, parameters: [String: Any]? = nil, payload: [String: Any]? = nil) throws -> URLRequest {
         guard let url: URL = URL(string: "" + endpoint) else {
             throw NSError()
         }
@@ -37,17 +39,17 @@ public class Server {
         return urlRequest
     }
     
-    static func request<T: Decodable>(endpoint: String) throws -> T {
-        let request: URLRequest = try self.createURLRequest(method: .get, endpoint: endpoint)
+    static func request<T: Decodable>(method: Method, endpoint: String) throws -> T {
+        let request: URLRequest = try self.current.createURLRequest(method: method, endpoint: endpoint)
         let (data, response, error) = try URLSession.performSynchronousRequest(request)
 
-        guard error == nil, let httpResponse: HTTPURLResponse = response else { throw error! }
-        if httpResponse.statusCode == 200, let data: Data = data {
+        guard error == nil else { throw error! }
+        if let data: Data = data, (response as? HTTPURLResponse)?.statusCode == 200 || !(response is HTTPURLResponse)   {
             let decoder: JSONDecoder = JSONDecoder()
             let object: T = try decoder.decode(T.self, from: data)
             return object
         } else {
-            throw ServerError.error(statusCode: httpResponse.statusCode, payload: data)
+            throw ServerError.error(statusCode: 200, payload: data)
         }
     }
 

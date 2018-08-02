@@ -10,7 +10,7 @@ import Foundation
 
 internal extension URLSession {
     
-    internal static func performSynchronousRequest(_ request: URLRequest) throws -> (Data?, HTTPURLResponse?, Error?) {
+    internal static func performSynchronousRequest(_ request: URLRequest) throws -> (Data?, URLResponse?, Error?) {
         var serverData: Data?
         var serverResponse: URLResponse?
         var serverError: Error?
@@ -29,7 +29,7 @@ internal extension URLSession {
 
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 
-        return (serverData, serverResponse as? HTTPURLResponse, serverError)
+        return (serverData, serverResponse, serverError)
     }
     
 }
