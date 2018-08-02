@@ -32,6 +32,8 @@
 		F71A247921127C2A001FA5EB /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A247821127C2A001FA5EB /* QueueManager.swift */; };
 		F71A247E21127CC2001FA5EB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A247D21127CC2001FA5EB /* CoreDataManager.swift */; };
 		F71A247F21127D82001FA5EB /* MobileTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F71A23D9211279D6001FA5EB /* MobileTest.xcdatamodeld */; };
+		F71A248821128BB0001FA5EB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A248721128BB0001FA5EB /* UserViewController.swift */; };
+		F71A248A21128C32001FA5EB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A248921128C32001FA5EB /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +188,8 @@
 		F71A245E21127A0C001FA5EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71A247821127C2A001FA5EB /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 		F71A247D21127CC2001FA5EB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F71A248721128BB0001FA5EB /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		F71A248921128C32001FA5EB /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +397,7 @@
 		F71A246B21127B23001FA5EB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F71A248921128C32001FA5EB /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				F71A23D4211279D6001FA5EB /* ViewController.swift */,
+				F71A248721128BB0001FA5EB /* UserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -842,6 +848,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71A23D5211279D6001FA5EB /* ViewController.swift in Sources */,
+				F71A248821128BB0001FA5EB /* UserViewController.swift in Sources */,
+				F71A248A21128C32001FA5EB /* UIViewExtension.swift in Sources */,
 				F71A23D3211279D6001FA5EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
