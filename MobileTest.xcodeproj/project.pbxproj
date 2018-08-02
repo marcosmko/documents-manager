@@ -34,6 +34,15 @@
 		F71A247F21127D82001FA5EB /* MobileTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F71A23D9211279D6001FA5EB /* MobileTest.xcdatamodeld */; };
 		F71A248821128BB0001FA5EB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A248721128BB0001FA5EB /* UserViewController.swift */; };
 		F71A248A21128C32001FA5EB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A248921128C32001FA5EB /* UIViewExtension.swift */; };
+		F71A24972112900F001FA5EB /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24962112900F001FA5EB /* UserServices.swift */; };
+		F71A2499211290BF001FA5EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A2498211290BF001FA5EB /* User.swift */; };
+		F71A249C2112911E001FA5EB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A249B2112911E001FA5EB /* Server.swift */; };
+		F71A249F2112916F001FA5EB /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A249E2112916F001FA5EB /* URLSessionExtension.swift */; };
+		F71A24A121129576001FA5EB /* Server+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24A021129576001FA5EB /* Server+User.swift */; };
+		F71A24A421129672001FA5EB /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24A321129672001FA5EB /* UserExtension.swift */; };
+		F71A24A721129BC5001FA5EB /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24A621129BC5001FA5EB /* UserDAO.swift */; };
+		F71A24AA21129C28001FA5EB /* MTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24A921129C28001FA5EB /* MTError.swift */; };
+		F71A24AC21129E05001FA5EB /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24AB21129E05001FA5EB /* PersistenceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +209,15 @@
 		F71A249321128EFE001FA5EB /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		F71A249421128EFE001FA5EB /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		F71A249521128EFE001FA5EB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F71A24962112900F001FA5EB /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		F71A2498211290BF001FA5EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F71A249B2112911E001FA5EB /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		F71A249E2112916F001FA5EB /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		F71A24A021129576001FA5EB /* Server+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+User.swift"; sourceTree = "<group>"; };
+		F71A24A321129672001FA5EB /* UserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtension.swift; sourceTree = "<group>"; };
+		F71A24A621129BC5001FA5EB /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		F71A24A921129C28001FA5EB /* MTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTError.swift; sourceTree = "<group>"; };
+		F71A24AB21129E05001FA5EB /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,9 +375,12 @@
 			isa = PBXGroup;
 			children = (
 				F71A243921127A01001FA5EB /* PersistenceTests */,
+				F71A249D21129162001FA5EB /* Extensions */,
 				F71A247C21127CB1001FA5EB /* Coredata */,
-				F71A242D21127A00001FA5EB /* Persistence.h */,
+				F71A249A21129110001FA5EB /* Mechanism */,
 				F71A248321127FC9001FA5EB /* Models */,
+				F71A242D21127A00001FA5EB /* Persistence.h */,
+				F71A24A521129BB6001FA5EB /* DAO */,
 				F71A242E21127A00001FA5EB /* Info.plist */,
 			);
 			path = Persistence;
@@ -452,6 +473,7 @@
 		F71A247621127BF1001FA5EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F71A24A821129C15001FA5EB /* Enumerations */,
 				F71A248221127F23001FA5EB /* Classes */,
 			);
 			path = Models;
@@ -468,6 +490,7 @@
 		F71A247A21127C41001FA5EB /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F71A24962112900F001FA5EB /* UserServices.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -491,6 +514,7 @@
 		F71A248221127F23001FA5EB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F71A2498211290BF001FA5EB /* User.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -498,6 +522,7 @@
 		F71A248321127FC9001FA5EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F71A24AD21129E0F001FA5EB /* Enumerations */,
 				F71A248421127FD2001FA5EB /* Extensions */,
 			);
 			path = Models;
@@ -506,6 +531,7 @@
 		F71A248421127FD2001FA5EB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F71A24A321129672001FA5EB /* UserExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -525,6 +551,47 @@
 				F71A248F21128EFD001FA5EB /* OpenSans-SemiboldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F71A249A21129110001FA5EB /* Mechanism */ = {
+			isa = PBXGroup;
+			children = (
+				F71A249B2112911E001FA5EB /* Server.swift */,
+				F71A24A021129576001FA5EB /* Server+User.swift */,
+			);
+			path = Mechanism;
+			sourceTree = "<group>";
+		};
+		F71A249D21129162001FA5EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F71A249E2112916F001FA5EB /* URLSessionExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F71A24A521129BB6001FA5EB /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				F71A24A621129BC5001FA5EB /* UserDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		F71A24A821129C15001FA5EB /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				F71A24A921129C28001FA5EB /* MTError.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		F71A24AD21129E0F001FA5EB /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				F71A24AB21129E05001FA5EB /* PersistenceError.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -902,6 +969,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71A2499211290BF001FA5EB /* User.swift in Sources */,
+				F71A24AA21129C28001FA5EB /* MTError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,7 +986,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71A24AC21129E05001FA5EB /* PersistenceError.swift in Sources */,
+				F71A249F2112916F001FA5EB /* URLSessionExtension.swift in Sources */,
 				F71A247E21127CC2001FA5EB /* CoreDataManager.swift in Sources */,
+				F71A24A721129BC5001FA5EB /* UserDAO.swift in Sources */,
+				F71A24A421129672001FA5EB /* UserExtension.swift in Sources */,
+				F71A249C2112911E001FA5EB /* Server.swift in Sources */,
+				F71A24A121129576001FA5EB /* Server+User.swift in Sources */,
 				F71A247F21127D82001FA5EB /* MobileTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -934,6 +1009,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71A24972112900F001FA5EB /* UserServices.swift in Sources */,
 				F71A247921127C2A001FA5EB /* QueueManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1329,6 +1405,7 @@
 		F71A2424211279E9001FA5EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Infrastructure/InfrastructureTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1347,6 +1424,7 @@
 		F71A2425211279E9001FA5EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Infrastructure/InfrastructureTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
